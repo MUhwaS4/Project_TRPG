@@ -108,6 +108,11 @@ class DiceRoll {
 			    System.out.println("Fumble!");
 			}
 			
+			// 총합 12를 넘어도 12로 고정
+			if (total > 12) {
+				total = 12;
+			}
+			
 			System.out.println();
 			
 		}
