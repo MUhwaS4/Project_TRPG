@@ -20,12 +20,19 @@ public class Roc {
 			String[] roll = sides.split("(?i)d");
 			
 			int numOfDice = Integer.parseInt(roll[0]);
+			int sidesOfDice = Integer.parseInt(roll[1]);
 			
-//			Dice rollDice = new Dice(sides);
-//			int num1 = rollDice.roll();
-//			int num2 = rollDice.roll();
-//			
-//			System.out.println("주사위의 결과: " + num1 + ", " + num2);
+			Dice rollDice = new Dice(sidesOfDice);
+			int total = 0;
+			
+			for (int i=0;i<numOfDice;i++) {
+				int num = rollDice.roll();
+				System.out.print(num + ", ");
+				total = total + num;
+			}
+			System.out.println("총합: " + total);
+			
+			System.out.println();
 			
 		}
 
